@@ -1,4 +1,7 @@
 # Self Modifying Code (SMC)
+
+[![Build Status](https://travis-ci.org/linusshops/self-modifying-code.svg)](https://travis-ci.org/linusshops/self-modifying-code)
+
 Requires [Runkit](http://php.net/manual/en/book.runkit.php) and [Reflection](http://php.net/manual/en/book.reflection.php)
 
 SMC provides a convenient way to reload functionality while you are in a REPL or debug console. 
