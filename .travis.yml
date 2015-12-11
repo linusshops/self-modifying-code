@@ -1,0 +1,12 @@
+language: php
+
+php:
+  - 5.5
+  - 5.6
+
+install:
+  - composer install
+  - pecl install runkit
+
+script:
+  - phpunit --coverage-text
