@@ -9,5 +9,8 @@
  */
 class ExampleClass
 {
-
+    function example()
+    {
+        return "exampleclass";
+    }
 }

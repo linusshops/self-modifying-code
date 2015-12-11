@@ -11,11 +11,6 @@ class SMC
 {
     private static $modifiedMethods = array();
 
-    public static function getModifiedMethods()
-    {
-        return self::$modifiedMethods;
-    }
-
     public static function reload_class($class)
     {
         $ref = new ReflectionClass($class);
@@ -32,7 +27,7 @@ class SMC
      * @param $methodname
      * @param $filename
      */
-    public static function trackModifiedMethod($classname, $methodname, $filename)
+    private static function trackModifiedMethod($classname, $methodname, $filename)
     {
         if (!isset(self::$modifiedMethods[$classname])) {
             self::$modifiedMethods[$classname] = array();
@@ -45,7 +40,7 @@ class SMC
         self::$modifiedMethods[$classname][$methodname] = $filename;
     }
 
-    public static function getTrackedMethodFilename($classname, $methodname)
+    private static function getTrackedMethodFilename($classname, $methodname)
     {
         return
         isset(self::$modifiedMethods[$classname])
@@ -79,7 +74,7 @@ class SMC
         );
     }
 
-    public static function getMethodArguments($class, $method)
+    private static function getMethodArguments($class, $method)
     {
         $method = new ReflectionMethod($class, $method);
         $methodname = $method->getName();
@@ -109,7 +104,7 @@ class SMC
         return $args;
     }
 
-    public static function getMethodCode($class, $method)
+    private static function getMethodCode($class, $method)
     {
         $method = new ReflectionMethod($class, $method);
         $methodname = $method->getName();

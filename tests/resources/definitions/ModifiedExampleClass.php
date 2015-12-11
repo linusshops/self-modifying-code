@@ -7,10 +7,10 @@
  * @company Linus Shops
  */
 
-namespace definitions;
-
-
-class ModifiedExampleClass
+class ExampleClass
 {
-
+    function example()
+    {
+        return "changed";
+    }
 }

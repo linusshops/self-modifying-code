@@ -7,8 +7,10 @@
  * @company Linus Shops
  */
 
-require 'src/SMC.php';
-
-if (! defined('BASE_DIR')) {
-    define('BASE_DIR', __DIR__);
+class ExampleClass
+{
+    function example()
+    {
+        return "changed";
+    }
 }

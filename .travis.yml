@@ -9,4 +9,4 @@ install:
   - pecl install runkit
 
 script:
-  - phpunit --coverage-text
+  - phpunit --coverage-text --process-isolation
