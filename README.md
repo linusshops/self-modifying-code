@@ -1,4 +1,4 @@
-# self-modifying-code
+# Self Modifying Code (SMC)
 Requires [Runkit](http://php.net/manual/en/book.runkit.php) and [Reflection](http://php.net/manual/en/book.reflection.php)
 
 SMC provides a convenient way to reload functionality while you are in a REPL or debug console. 
