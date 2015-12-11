@@ -3,7 +3,7 @@ Requires [Runkit](http://php.net/manual/en/book.runkit.php) and [Reflection](htt
 
 SMC provides a convenient way to reload functionality while you are in a REPL or debug console. 
 
-Ever test something in the console, and realize while you're debugging what needs to be changed? Normally, you'd have to terminate the session, losing any accumulated context from your console session. SMC allows you to reload a class or method definition in mid-execution.
+Ever test something in the console, and realize while you're debugging what needs to be changed? Normally, you'd have to terminate the session, losing any accumulated context from your console session. SMC allows you to reload a class or method definition in mid-execution (similar to REPL environments provided by lisp and clojure).
 
 Due to a limitation in runkit, if you are currently executing a class, you cannot reload the whole thing. However, you can reload individual methods as well.
 
