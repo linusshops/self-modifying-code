@@ -18,9 +18,22 @@ class SMC
         return runkit_import($filename, RUNKIT_IMPORT_OVERRIDE|RUNKIT_IMPORT_CLASS_METHODS);
     }
 
-    public static function reload_method($classname, $methodname, $args = array(), $visibility = RUNKIT_ACC_PUBLIC)
+    public static function reload_method($classname, $methodname, $args = array())
     {
         $args = implode(',', $args);
+
+        $method = new ReflectionMethod($classname, $methodname);
+        $visibility = RUNKIT_ACC_PUBLIC;
+
+        if ($method->isProtected()) {
+            $visibility = RUNKIT_ACC_PROTECTED;
+        } else if ($method->isPrivate()) {
+            $visibility = RUNKIT_ACC_PRIVATE;
+        }
+
+        if ($method->isStatic()) {
+            $visibility = $visibility | RUNKIT_ACC_STATIC;
+        }
 
         return runkit_method_redefine(
             $classname,
