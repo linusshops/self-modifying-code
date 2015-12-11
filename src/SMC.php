@@ -44,15 +44,6 @@ class SMC
         );
     }
 
-    /**
-     * Refresh SMC itself
-     */
-    public static function selfRefresh()
-    {
-        $reflection = new ReflectionClass(self::class);
-
-    }
-
     public static function getMethodCode($class, $method)
     {
         $method = new ReflectionMethod($class, $method);
