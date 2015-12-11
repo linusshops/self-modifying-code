@@ -18,7 +18,7 @@ If you are using this to implement functionality, you need to seriously re-evalu
 ## Installation
 If runkit is not installed, install it with `pecl install runkit`.
 
-Add `linusshops/runkit` to your composer.json.
+Add `linusshops/self-modifying-code` to your composer.json.
 
 ## Usage
 All reload methods return a boolean indicating if SMC was able to redefine the requested identifier.
