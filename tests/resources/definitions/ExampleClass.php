@@ -13,4 +13,19 @@ class ExampleClass
     {
         return "exampleclass";
     }
+
+    function exampleArg($arg)
+    {
+        return 'original';
+    }
+
+    function exampleArgDefault($arg =null)
+    {
+        return 'original';
+    }
+
+    function addArg()
+    {
+        return 'original';
+    }
 }

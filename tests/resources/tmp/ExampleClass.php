@@ -13,4 +13,19 @@ class ExampleClass
     {
         return "changed";
     }
+
+    function exampleArg($arg)
+    {
+        return $arg;
+    }
+
+    function exampleArgDefault($arg)
+    {
+        return $arg;
+    }
+
+    function addArg($arg)
+    {
+        return $arg;
+    }
 }
