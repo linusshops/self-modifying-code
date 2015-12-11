@@ -77,8 +77,8 @@ class SMC
     private static function getMethodArguments($class, $method)
     {
         $method = new ReflectionMethod($class, $method);
-        $methodname = $method->getName();
-        $classname = $method->getDeclaringClass()->getName();
+        $methodname = $method->name;
+        $classname = $method->class;
         if (! $filename =
             self::getTrackedMethodFilename($classname, $methodname)) {
             $filename = $method->getFileName();
@@ -107,8 +107,8 @@ class SMC
     private static function getMethodCode($class, $method)
     {
         $method = new ReflectionMethod($class, $method);
-        $methodname = $method->getName();
-        $classname = $method->getDeclaringClass()->getName();
+        $methodname = $method->name;
+        $classname = $method->class;
         if (! $filename =
             self::getTrackedMethodFilename($classname, $methodname)) {
             $filename = $method->getFileName();
