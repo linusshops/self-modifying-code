@@ -1,7 +1,7 @@
 {
   "name": "linusshops/self-modifying-code",
   "description": "Runtime modification of class definitions",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "type": "utility",
   "keywords": [
     "linus shops",
