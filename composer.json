@@ -1,7 +1,6 @@
 {
   "name": "linusshops/self-modifying-code",
   "description": "Runtime modification of class definitions",
-  "version": "0.0.2",
   "type": "utility",
   "keywords": [
     "linus shops",
@@ -27,7 +26,7 @@
     }
   ],
   "require": {
-    "php": ">=5.0.0"
+    "php": "^5.0.0"
   },
     "autoload": {
       "files": ["src/SMC.php"]
